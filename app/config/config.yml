@@ -19,8 +19,6 @@ framework:
     csrf_protection: ~
     validation: { enable_annotations: true }
     #serializer: { enable_annotations: true }
-    templating:
-        engines: ['twig']
     default_locale: '%locale%'
     trusted_hosts: ~
     session:
@@ -32,11 +30,6 @@ framework:
     assets: ~
     php_errors:
         log: true
-
-# Twig Configuration
-twig:
-    debug: '%kernel.debug%'
-    strict_variables: '%kernel.debug%'
 
 # Doctrine Configuration
 doctrine:

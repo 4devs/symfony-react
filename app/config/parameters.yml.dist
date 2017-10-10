@@ -17,6 +17,3 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
-
-    #Index html for the development
-    index.html: '%kernel.project_dir%/frontend/public/index.html'
