@@ -12,13 +12,13 @@ Install Application
 ===================
 
 ### create app
-install [composer][2]
-run command `composer create-project 4devs/symfony-react`
+* install [composer][2]
+* run command `composer create-project 4devs/symfony-react`
 
 ### use docker composer
-install [docker][4]
-run command `docker-compose up --build`
-add to `/etc/hosts` host `127.0.0.1       symfony.local`
+* install [docker][4]
+* run command `docker-compose up --build`
+* add to `/etc/hosts` host `127.0.0.1       symfony.local`
 
 Use docker
 ==========
