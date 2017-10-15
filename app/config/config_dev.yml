@@ -11,6 +11,11 @@ web_profiler:
     toolbar: true
     intercept_redirects: false
 
+# Twig Configuration
+twig:
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+
 monolog:
     handlers:
         main:
