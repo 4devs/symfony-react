@@ -18,7 +18,9 @@ framework:
     form: ~
     csrf_protection: ~
     validation: { enable_annotations: true }
-    #serializer: { enable_annotations: true }
+    serializer:
+        enable_annotations: true
+    property_info: ~
     default_locale: '%locale%'
     trusted_hosts: ~
     session:
