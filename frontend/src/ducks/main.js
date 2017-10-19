@@ -1,5 +1,5 @@
 import { all } from 'redux-saga/effects';
-import { actionCreator, asyncActionCreators } from './utils';
+import { actionCreator, asyncActionCreators, createAxiosSaga } from './utils';
 import { appName } from '../config';
 
 /**
@@ -38,7 +38,8 @@ export const exampleAsyncAction = asyncActionCreators(CONST_EXAMPLE);
 /**
  * Sagas
  * */
+export const exampleSaga = createAxiosSaga(exampleAsyncAction);
 
 export const saga = function*() {
-  yield all([]);
+  yield all([exampleSaga()]);
 };
