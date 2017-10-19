@@ -46,20 +46,6 @@ export function asyncActionCreators(type, commonMeta) {
   };
 }
 
-const urlParams = queryString.parse(window.location.search);
-
-const getHeaderName = string => {
-  return string
-    .split('_')
-    .map(el => {
-      return el.slice(0, 1).toUpperCase() + el.slice(1);
-    })
-    .join('-');
-};
-Object.keys(urlParams).forEach(key => {
-  axios.defaults.headers.common[`X-${getHeaderName(key)}`] = urlParams[key];
-});
-
 export function createAxiosSaga(asyncAction, axiosParams) {
   return function* asyncSagaRequest() {
     while (true) {
