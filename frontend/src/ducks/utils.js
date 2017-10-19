@@ -1,5 +1,4 @@
 import axios from 'axios';
-import queryString from 'query-string';
 import { put, call, take } from 'redux-saga/effects';
 import ErrorStackParser from 'error-stack-parser';
 
@@ -49,7 +48,7 @@ export function asyncActionCreators(type, commonMeta) {
 export function createAxiosSaga(asyncAction, axiosParams) {
   return function* asyncSagaRequest() {
     while (true) {
-      const { payload, meta } = yield take(asyncAction.request.type);
+      const { payload = {}, meta } = yield take(asyncAction.request.type);
 
       yield put(asyncAction.started(payload, meta));
       try {
